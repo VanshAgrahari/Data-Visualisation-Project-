@@ -166,41 +166,70 @@ st.set_page_config(page_title='India Analysis:Census-2011',page_icon='india imag
 st.sidebar.header('Perform Analysis')
 select1=st.sidebar.selectbox('Choose what yo want to perform',['Choose Option','Overall Analysis','State Wise Analysis'])
 if select1=='Choose Option':
-    st.markdown(
+
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+     st.markdown(
     """
-    <h4 style='text-align: center; color: #2E8B57;'>
-    <i>India’s strength lies in its diversity — through data, we understand its progress, and through analysis, we shape its future.</i>
-    </h4>
+    <h1 style='text-align: center; color: #00FFFF; font-size: 48px;'>
+       Welcome to the 2011 Census-Based Analysis of India and its States
+    </h1>
+    <hr style='border: 2px solid #00FFFF;'>
     """,
     unsafe_allow_html=True
 )
+     st.markdown(
+        """
+          ---
+        """
+     )
+     st.image("india image.jpg", use_container_width=True)
+
+    st.markdown(
+    """
+    <h3 style='text-align: center; color: #2E8B57;'>
+    <i>India’s strength lies in its diversity — through data, we understand its progress, and through analysis, we shape its future.</i>
+    </h4>
+    <hr style='margin-top: 10px; margin-bottom: 10px;'>
+    """,
+
+    unsafe_allow_html=True
+)
     
-    img = Image.open("india image.jpg")
-    st.image(img, width=600)
-
     st.markdown("""
-Welcome to this interactive dashboard built with **Streamlit**, where I bring the **2011 Indian Census** data to life using clear, compelling **graphs and diagrams**.
+<div style='font-size:18px; line-height:1.6; color:#F0F0F0;'>
 
----
+<h2 style='color:#FFD700;'>🇮🇳 Welcome to the Indian Census 2011 Dashboard</h2>
 
-🔍 **Explore powerful insights like**:
-- 📚 Literacy rates by gender and region  
-- 👥 Population distributions across the country  
-- 💸 Income-wise **Power Parity** from ₹45,000 to ₹5,45,000+  
-- 🌐 Region-wise and statewise trends via **sunbursts, treemaps, bar charts, and maps**
+This interactive dashboard, built with <b style='color:#1E90FF;'>Streamlit</b>, brings the <b style='color:#1E90FF;'>2011 Indian Census</b> data to life through intuitive <b style='color:#87CEFA;'>graphs and diagrams</b>.
 
----
+<br>
 
-🎯 **Use the Sidebar to:**
-- View **Overall Analysis** for a national-level overview  
-- Switch to **Statewise Analysis** and select your **state and parameters** of interest for a more detailed dive
+<h3 style='color:#FFD700;'>🔍 Explore powerful insights like:</h3>
+<ul>
+<li>📚 <span style='color:#87CEFA;'>Literacy rates</span> by gender and region</li>
+<li>👥 <span style='color:#87CEFA;'>Population distribution</span> across the country</li>
+<li>💸 Income-wise <span style='color:#87CEFA;'>Power Parity</span> from ₹45,000 to ₹5,45,000+</li>
+<li>🌐 Region-wise and statewise trends via <b>sunbursts</b>, <b>treemaps</b>, <b>bar charts</b>, and <b>maps</b></li>
+</ul>
 
----
+<hr style='border:1px solid #444;'>
 
-This dashboard makes vast census data simple, visual, and interactive — perfect for students, researchers, analysts, and the simply curious.
+<h3 style='color:#FFD700;'>🎯 Use the Sidebar to:</h3>
+<ul>
+<li>View <b style='color:#87CEFA;'>Overall Analysis</b> for a national-level overview</li>
+<li>Switch to <b style='color:#87CEFA;'>Statewise Analysis</b> and select your <b style='color:#87CEFA;'>state and parameters</b> of interest</li>
+</ul>
 
-> **Created by Vansh Agrahari** — Dive in, discover the data, and see the story India tells.
-""")
+<hr style='border:1px solid #444;'>
+
+<p>This dashboard makes vast census data <b style='color:#87CEFA;'>simple</b>, <b style='color:#87CEFA;'>visual</b>, and <b style='color:#87CEFA;'>interactive</b> — perfect for students, researchers, analysts, and the simply curious.</p>
+
+<blockquote style='font-size:16px; color:#FFD700;'><b>Created by Vansh Agrahari</b> — Dive in, discover the data, and see the story India tells.</blockquote>
+
+</div>
+""", unsafe_allow_html=True)
+
 
 
 elif select1=='Overall Analysis':
@@ -244,6 +273,9 @@ elif select1=='State Wise Analysis':
     if btn:
         State_Analysis(state,op3,op4)
     
+
+
+
 
 
 
