@@ -165,7 +165,42 @@ st.set_page_config(page_title='India Analysis:Census-2011',page_icon='india imag
 st.sidebar.header('Perform Analysis')
 select1=st.sidebar.selectbox('Choose what yo want to perform',['Choose Option','Overall Analysis','State Wise Analysis'])
 if select1=='Choose Option':
-    pass
+    st.markdown(
+    """
+    <h4 style='text-align: center; color: #2E8B57;'>
+    <i>India’s strength lies in its diversity — through data, we understand its progress, and through analysis, we shape its future.</i>
+    </h4>
+    """,
+    unsafe_allow_html=True
+)
+    
+    img = Image.open("india image.jpg")
+    st.image(img, width=600)
+
+    st.markdown("""
+Welcome to this interactive dashboard built with **Streamlit**, where I bring the **2011 Indian Census** data to life using clear, compelling **graphs and diagrams**.
+
+---
+
+🔍 **Explore powerful insights like**:
+- 📚 Literacy rates by gender and region  
+- 👥 Population distributions across the country  
+- 💸 Income-wise **Power Parity** from ₹45,000 to ₹5,45,000+  
+- 🌐 Region-wise and statewise trends via **sunbursts, treemaps, bar charts, and maps**
+
+---
+
+🎯 **Use the Sidebar to:**
+- View **Overall Analysis** for a national-level overview  
+- Switch to **Statewise Analysis** and select your **state and parameters** of interest for a more detailed dive
+
+---
+
+This dashboard makes vast census data simple, visual, and interactive — perfect for students, researchers, analysts, and the simply curious.
+
+> **Created by Vansh Agrahari** — Dive in, discover the data, and see the story India tells.
+""")
+
 
 elif select1=='Overall Analysis':
     st.header('India Analysis Based On Census 2011')
