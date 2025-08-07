@@ -199,7 +199,7 @@ if select1=='Choose Option':
     st.markdown("""
 <div style='font-size:18px; line-height:1.6; color:#F0F0F0;'>
 
-<h2 style='color:#FFD700;'>🇮🇳 Welcome to the Indian Census 2011 Dashboard</h2>
+<h2 style='color:#FFD700;'>Welcome to the Indian Census 2011 Dashboard</h2>
 
 This interactive dashboard, built with <b style='color:#1E90FF;'>Streamlit</b>, brings the <b style='color:#1E90FF;'>2011 Indian Census</b> data to life through intuitive <b style='color:#87CEFA;'>graphs and diagrams</b>.
 
