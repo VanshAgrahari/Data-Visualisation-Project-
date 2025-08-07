@@ -99,7 +99,7 @@ def State_Analysis(state,op1,op2):
     st.subheader('Our State {}:'.format(state))
    
     if state=='Bihar':
-    temp_df=temp_df[ ~(temp_df['District code']==515)]
+     temp_df=temp_df[ ~(temp_df['District code']==515)]
     
     col1,col2=st.columns(2)
     with col1:
